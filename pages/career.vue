@@ -1,7 +1,7 @@
 <template>
   <Scaffold>
     <h1 class="title">
-      portfolio
+      Career
     </h1>
   </Scaffold>
 </template>

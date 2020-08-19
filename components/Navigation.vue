@@ -26,11 +26,11 @@
           About
         </nuxt-link>
 
-        <nuxt-link to="/about" class="navbar-item">
+        <nuxt-link to="/work" class="navbar-item">
           Work
         </nuxt-link>
 
-        <nuxt-link to="/about" class="navbar-item">
+        <nuxt-link to="/career" class="navbar-item">
           Career
         </nuxt-link>
       </div>
