@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer mt-6">
     <div class="content has-text-centered">
       <p>
         <strong>TWO.THREE.EIGHT portfolio</strong> by

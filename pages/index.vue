@@ -19,12 +19,16 @@ export default {}
 .hero {
   position: relative;
 
+  img {
+    vertical-align: middle;
+  }
+
   .title {
     position: absolute;
-    mix-blend-mode: color-dodge;
     color: #fff;
     mix-blend-mode: exclusion;
-    bottom: 0;
+    bottom: 20px;
+    right: 20px;
     font-size: 60px;
   }
 }
