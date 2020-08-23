@@ -4,7 +4,7 @@
       Career
     </h1>
     <div class="box">
-      <div class="content">
+      <div class="content is-small">
         <h2>転職・求人情報サービスのエンハンス開発</h2>
         <p>
           転職・求人情報サービスの開発にFEメンバーとして参画。コーディングの他にベトナムオフショア開発のマネジメントも担当。サイト仕様としては、SPAではなく画面単位でVueが導入されていました。
@@ -16,7 +16,7 @@
         <h5>チーム規模</h5>
         <p>フロントエンドチーム：8名</p>
         <h5>開発環境</h5>
-        <div class="tags are-medium">
+        <div class="tags are-small">
           <span class="tag">JavaScript</span>
           <span class="tag">Vue.js</span>
           <span class="tag">HTML</span>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="box">
-      <div class="content">
+      <div class="content is-small">
         <h2>チャットボットWebサービス開発</h2>
         <p>
           ホテル・旅館のフロントにかわってWebから質問ができるチャットボットサービスカスタマー画面のフロントエンドについては、一人で担当しておりました。
@@ -39,7 +39,7 @@
         <h5>チーム規模</h5>
         <p>フロントエンドチーム：1名</p>
         <h5>開発環境</h5>
-        <div class="tags are-medium">
+        <div class="tags are-small">
           <span class="tag">JavaScript</span>
           <span class="tag">Vue.js</span>
           <span class="tag">HTML</span>
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="box">
-      <div class="content">
+      <div class="content is-small">
         <h2>宿・ホテル予約サイトエンハンス開発</h2>
         <p>
           年間UU数は数百万人以上の宿・ホテル予約サイトの開発。途中からは、FEチーム（6人規模）のリーダーとして、レガシーな環境（コード、環境とも）の中、生産性を高める取り組みをおこなってきました。
@@ -63,7 +63,7 @@
         <h5>チーム規模</h5>
         <p>フロントエンドチーム：4名</p>
         <h5>開発環境</h5>
-        <div class="tags are-medium">
+        <div class="tags are-small">
           <span class="tag">JavaScript</span>
           <span class="tag">jQuery</span>
           <span class="tag">HTML</span>
