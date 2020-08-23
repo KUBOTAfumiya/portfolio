@@ -1,5 +1,5 @@
 <template>
-  <Scaffold>
+  <div>
     <h1 class="title">
       About
     </h1>
@@ -48,7 +48,7 @@
         </nuxt-link>
       </p>
     </div>
-  </Scaffold>
+  </div>
 </template>
 
 <script>
