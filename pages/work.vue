@@ -5,23 +5,25 @@
     </h1>
     <div class="columns is-multiline">
       <div v-for="item in items" :key="item.id" class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img :src="item.thumbnail.url" alt="" />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p>{{ item.title }}</p>
-              <div class="tags are-small">
-                <span v-for="tool in item.tools" :key="tool" class="tag">{{
-                  tool
-                }}</span>
+        <nuxt-link :to="`/works/${item.id}`">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img :src="item.thumbnail.url" alt="" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p>{{ item.title }}</p>
+                <div class="tags are-small">
+                  <span v-for="tool in item.tools" :key="tool" class="tag">{{
+                    tool
+                  }}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
       <div class="column is-4">
         <div class="card">
