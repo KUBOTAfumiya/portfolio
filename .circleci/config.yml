@@ -1,0 +1,25 @@
+version: 2.1 # CircleCI 2.1 を使用します
+jobs: # 一連のステップ
+  build: # ワークフローを使用しない実行では、エントリポイントとして `build` ジョブが必要です
+    working_directory: ~/mern-starter # ステップが実行されるディレクトリ
+    docker: # Docker でステップを実行します
+      - image: circleci/node:13.7.0 # このイメージをすべての `steps` が実行されるプライマリ コンテナとして使用します
+    steps: # 実行可能コマンドの集合
+      - checkout # ソース コードを作業ディレクトリにチェックアウトする特別なステップ
+      - run:
+          name: update-yarn
+          command: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - restore_cache: # 依存関係キャッシュを復元する特別なステップ
+          # 依存関係キャッシュについては https://circleci.com/ja/docs/2.0/caching/ をお読みください
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: install-npm-wee
+          command: yarn install
+      - save_cache: # 依存関係キャッシュを保存する特別なステップ
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run: # テストを実行します
+          name: lint
+          command: yarn lint
+      # デプロイ例については https://circleci.com/ja/docs/2.0/deployment-integrations/ を参照してください
