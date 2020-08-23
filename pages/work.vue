@@ -8,7 +8,7 @@
         <nuxt-link :to="`/works/${item.id}`">
           <div class="card">
             <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="image is-4by3 has-background-light	">
                 <img :src="item.thumbnail.url" alt="" />
               </figure>
             </div>
@@ -25,15 +25,6 @@
           </div>
         </nuxt-link>
       </div>
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              Coming Soon
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -43,7 +34,7 @@ import axios from 'axios'
 export default {
   async asyncData() {
     const { data } = await axios.get(
-      'https://portfolio_238.microcms.io/api/v1/work',
+      'https://portfolio_238.microcms.io/api/v1/work?fields=id,thumbnail,title,tools',
       {
         headers: { 'X-API-KEY': process.env.API_KEY },
       }
@@ -64,6 +55,11 @@ export default {
 .column {
   .card {
     height: 100%;
+  }
+}
+.image {
+  img {
+    object-fit: contain;
   }
 }
 </style>
