@@ -1,5 +1,5 @@
 <template>
-  <Scaffold>
+  <div>
     <h1 class="title">
       Career
     </h1>
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-  </Scaffold>
+  </div>
 </template>
 
 <script>

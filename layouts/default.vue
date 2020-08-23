@@ -1,7 +1,9 @@
 <template>
-  <transition name="page">
-    <Nuxt />
-  </transition>
+  <Scaffold>
+    <transition name="page">
+      <Nuxt />
+    </transition>
+  </Scaffold>
 </template>
 
 <style>

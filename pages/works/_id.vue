@@ -1,9 +1,7 @@
 <template>
-  <Scaffold>
     <div>
       <h2>{{ item.title }}</h2>
     </div>
-  </Scaffold>
 </template>
 
 <script>

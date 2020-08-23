@@ -1,14 +1,12 @@
 <template>
-  <Scaffold>
-    <div class="hero">
-      <div>
-        <img src="/images/nightrace.jpg" alt="" />
-      </div>
-      <h1 class="title">
-        portfolio
-      </h1>
+  <div class="hero">
+    <div>
+      <img src="/images/nightrace.jpg" alt="" />
     </div>
-  </Scaffold>
+    <h1 class="title">
+      portfolio
+    </h1>
+  </div>
 </template>
 
 <script>
