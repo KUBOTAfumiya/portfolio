@@ -1,3 +1,7 @@
+import axios from 'axios'
+require('dotenv').config()
+const { API_KEY } = process.env
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -29,7 +33,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [{ src: '~assets/css/main.scss', lang: 'scss' }],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -54,7 +58,7 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
+    // '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
   ],
@@ -74,6 +78,28 @@ export default {
           customProperties: false,
         },
       },
+    },
+    hotMiddleware: {
+      client: {
+        // turn off client overlay when errors are present
+        overlay: false,
+      },
+    },
+  },
+  env: {
+    API_KEY,
+  },
+  generate: {
+    routes() {
+      return axios
+        .get('https://portfolio_238.microcms.io/api/v1/work', {
+          headers: { 'X-API-KEY': process.env.API_KEY },
+        })
+        .then((res) => {
+          return res.data.contents.map((user) => {
+            return '/works/' + user.id
+          })
+        })
     },
   },
 }
