@@ -1,3 +1,6 @@
+require('dotenv').config()
+const { API_KEY } = process.env
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -81,5 +84,8 @@ export default {
         overlay: false,
       },
     },
+  },
+  env: {
+    API_KEY,
   },
 }

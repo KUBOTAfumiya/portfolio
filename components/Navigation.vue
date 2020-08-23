@@ -1,5 +1,9 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav
+    class="navbar is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand">
       <nuxt-link to="/" class="navbar-item">TWO.THREE.EIGHT</nuxt-link>
 
@@ -39,5 +43,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    document.body.classList.add('has-navbar-fixed-top')
+  },
+}
 </script>
